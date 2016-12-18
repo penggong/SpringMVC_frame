@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.craft.Spring.Dao.UserDao_mvc">
+  <resultMap type="com.craft.Spring.entity.User" id="userMap">
+    <id property="u_id" column="u_id"/>
+    <result property="u_name" column="u_name"/>
+    <result property="u_phone" column="u_phone"/>
+  </resultMap>
+  
+  <insert id="insertUser">
+     insert into User(u_id,u_name,u_phone,u_sal) values (#{u_id},#{u_name},#{u_phone},#{u_sal});
+  </insert>
+  <update id="update_User">
+     update User set u_name=#{u_name},u_phone=#{u_phone},u_sal=#{u_sal} where u_id=#{u_id};
+  </update>
+  <select id="selectById_User" resultType="com.craft.Spring.entity.User" parameterType="Integer">
+     select u_id,u_name,u_phone,u_sal from User where u_id=#{u_id};
+  </select>
+  <select id="selectAll_User" resultType="com.craft.Spring.entity.User">
+     select u_id,u_name,u_phone,u_sal from User
+  </select>
+  <select id="selectFindALLWithFy" parameterType="map" resultType="com.craft.Spring.entity.User">
+     select u_id,u_name,u_phone,u_sal from User limit #{pstart},#{psize}
+  </select>
+  <select id="selectFindALLByNameWithFy" parameterType="map" resultType="com.craft.Spring.entity.User">
+     select u_id,u_name,u_phone,u_sal from User where u_name like #{pname} limit #{pstart},#{psize} 
+  </select>
+</mapper>
