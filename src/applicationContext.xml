@@ -81,6 +81,9 @@
 			expression="org.springframework.stereotype.Service" />  -->
       </context:component-scan>
       
+      <!-- 开启json支持 -->
+      <mvc:annotation-driven></mvc:annotation-driven>
+      
       <!-- 配置SessionTemplate,封装dao层的mybits操作 -->
       <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
                <constructor-arg name="sqlSessionFactory"  ref="sqlSessionFactory"></constructor-arg>
