@@ -1,6 +1,8 @@
 package com.craft.Spring.Service.Impl;
 
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +27,45 @@ public class UserServiceImpl implements UserService{
 	/**
 	 *    添加用户
 	 */
-	     public void insertUser(User user) throws Exception{
-    	userDao.insertUser(user);
+	    public void insertUser(User user) throws Exception{
+    	userDao.insert(user);
     }
+	
+	@Override
+	public User selectByPk(int Pk) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public User select(User entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public int deleteByPk(User entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int updateByPk(User entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public List<User> selectUseDyc(User entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public User login(User user) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(User entity) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
 

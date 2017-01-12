@@ -26,7 +26,7 @@ public class ConnectionTest {
 		user.setU_phone(22);
 		user.setU_sal("男");
 		System.out.println(user.getU_name());
-		usermvc.insertUser(user);
+		//usermvc.insertUser(user);
 	
 	}
 }

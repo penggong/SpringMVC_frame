@@ -5,7 +5,8 @@ import com.craft.Spring.entity.User;
 /*
  * user 表数据层
  */
-public interface UserDao_mvc {
+public interface UserDao_mvc extends BaseMapper<User>{
 
-	public void insertUser(User user) throws Exception;
+	//public void insertUser(User user) throws Exception;
+	
 }

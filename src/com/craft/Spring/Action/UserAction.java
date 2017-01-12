@@ -38,4 +38,14 @@ public class UserAction{
 		user.setU_name("这是测试的名字");
 		return user;
 	}
+	
+	@RequestMapping(value="login.action",method=RequestMethod.POST)
+	@ResponseBody
+	public String login(Model model,User user) throws Exception {
+		System.out.println(user.getU_id());
+		userService.login(user);
+		model.addAttribute("success", "Second成功");
+		model.addAttribute("user", user);
+		return "spring";
+	}
 }

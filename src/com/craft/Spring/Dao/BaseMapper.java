@@ -12,9 +12,9 @@ public interface BaseMapper<T> {
 	//根据主键查询
 	T selectByPk(T entity);
 	//根据主键删除
-	T deleteByPk(T entity);
+	int deleteByPk(T entity);
 	//根据主键修改
-	T updateByPk(T entity);
+	int updateByPk(T entity);
 	//根据对象动态生成SQL语句
 	List<T> selectUseDyc(T entity);
 

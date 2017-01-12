@@ -9,7 +9,7 @@
     <result property="u_phone" column="u_phone"/>
   </resultMap>
   
-  <insert id="insertUser">
+  <insert id="insert">
      insert into User(u_id,u_name,u_phone,u_sal) values (#{u_id},#{u_name},#{u_phone},#{u_sal});
   </insert>
   <update id="update_User">
@@ -27,4 +27,5 @@
   <select id="selectFindALLByNameWithFy" parameterType="map" resultType="com.craft.Spring.entity.User">
      select u_id,u_name,u_phone,u_sal from User where u_name like #{pname} limit #{pstart},#{psize} 
   </select>
+  <select id="deleteById"></select>
 </mapper>
