@@ -6,7 +6,7 @@
 <title>user模型收集${pageContext.request.contextPath}</title>
 </head>
 <body>
-  <form action="${pageContext.request.contextPath}/insert.action" method="post">
+  <form action="${pageContext.request.contextPath}/User/insert.action" method="post">
      <table>
         <tr>
            <td>

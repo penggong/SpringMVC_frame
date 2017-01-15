@@ -28,7 +28,7 @@ $(
 </head>
 <body>
   <button id="btn_test">testJSON</button>
-  <form action="${pageContext.request.contextPath}/insertAjax.action" method="post">
+  <form action="${pageContext.request.contextPath}/User/insertAjax.action" method="post">
      <table>
         <tr>
            <td>

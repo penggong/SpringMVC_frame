@@ -7,6 +7,7 @@
     <id property="u_id" column="u_id"/>
     <result property="u_name" column="u_name"/>
     <result property="u_phone" column="u_phone"/>
+    <result property="u_pwd" column="u_pwd"/>
   </resultMap>
   
   <insert id="insert">
@@ -17,6 +18,9 @@
   </update>
   <select id="selectById_User" resultType="com.craft.Spring.entity.User" parameterType="Integer">
      select u_id,u_name,u_phone,u_sal from User where u_id=#{u_id};
+  </select>
+  <select id="login_User" resultType="com.craft.Spring.entity.User" parameterType="Integer">
+     select u_id,u_name,u_phone,u_sal,u_pwd from User where u_name=#{u_name} and u_pwd=#{u_pwd};
   </select>
   <select id="selectAll_User" resultType="com.craft.Spring.entity.User">
      select u_id,u_name,u_phone,u_sal from User

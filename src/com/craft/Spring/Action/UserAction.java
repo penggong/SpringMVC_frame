@@ -12,7 +12,7 @@ import com.craft.Spring.Service.UserService;
 import com.craft.Spring.entity.User;
 
 @Controller
-/*@RequestMapping("/User")*/
+@RequestMapping("/User")
 public class UserAction{
 	@Resource
 	private UserService userService;
@@ -24,7 +24,7 @@ public class UserAction{
 	@RequestMapping(value="insert.action",method=RequestMethod.POST)
 	public String insert(Model model,User user) throws Exception {
 		System.out.println(user.getU_id());
-		userService.insertUser(user);
+		userService.insert(user);
 		model.addAttribute("success", "Second成功");
 		model.addAttribute("user", user);
 		return "spring";
@@ -41,11 +41,18 @@ public class UserAction{
 	
 	@RequestMapping(value="login.action",method=RequestMethod.POST)
 	@ResponseBody
-	public String login(Model model,User user) throws Exception {
-		System.out.println(user.getU_id());
-		userService.login(user);
-		model.addAttribute("success", "Second成功");
-		model.addAttribute("user", user);
+	public String login(String u_name,String u_pwd,User user) throws Exception {
+		System.out.println("页面获取用户信息："+user.getU_id());
+		System.out.println("页面获取用户信息手动："+u_name);
+		user.setU_name(u_name);
+		user.setU_pwd(u_pwd);
+		User userInfo = userService.login(user);
+		System.out.println("页面获取用户信息2："+user.getU_id());
+		if(userInfo.getU_id()>0){
+		    System.out.println("success login");
+		}else{
+			System.out.println("fail login");
+		}
 		return "spring";
 	}
 }

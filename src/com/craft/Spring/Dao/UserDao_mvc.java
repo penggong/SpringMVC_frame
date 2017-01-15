@@ -8,5 +8,5 @@ import com.craft.Spring.entity.User;
 public interface UserDao_mvc extends BaseMapper<User>{
 
 	//public void insertUser(User user) throws Exception;
-	
+	public User login_User(User user) throws Exception;
 }

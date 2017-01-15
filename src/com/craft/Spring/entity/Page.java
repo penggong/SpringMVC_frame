@@ -12,8 +12,8 @@ public class Page<T> implements Serializable {
 	 */
 	private static final long serialVersionUID = -3432955381042498897L;
 	private Integer page;//当前页
-	private Integer rows;//页大侠
-	private Integer totalRecord;//总记录树
+	private Integer rows;//页大小
+	private Integer totalRecord;//总记录数
 	private List<T> list;//页面数据列表
 	private String keyWord;//查询关键字
 	private T paramEntity;//多条件查询

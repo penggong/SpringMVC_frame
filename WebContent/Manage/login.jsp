@@ -37,7 +37,7 @@
 	<div class="rom">
 		<div class="col-xs-8 login-box">
 			<h4>用户登陆</h4>
-			<form name="formlogin" class="form-horizontal" role="form" method="post" action="${pageContext.request.contextPath}/login/Manage.action" onSubmit="return mycheck()">
+			<form name="formlogin" class="form-horizontal" role="form" method="post" action="${pageContext.request.contextPath}/User/login.action" onSubmit="return mycheck()">
 				<div class="form-group">
 					<label for="sliderLock" class="col-xs-2 control-label">解锁验证</label>
 					<div class="col-xs-7">
@@ -50,14 +50,14 @@
 				<div class="form-group">
 					<label for="login-name" class="col-xs-2 control-label">登陆名称</label>
 					<div class="col-xs-7">
-						<input type="text" name="loginname" class="form-control" id="loginname" placeholder="登陆名称">
+						<input type="text" name="u_name" id="u_name" class="form-control" placeholder="登陆名称">
 						<label class="control-label helplable" for="login-name">填写用户名</label>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="login-pass" class="col-xs-2 control-label">登陆密码</label>
 					<div class="col-xs-7">
-						<input type="password" name="loginpass" class="form-control" id="loginpass" placeholder="登陆密码">
+						<input type="password" name="u_pwd" id="u_pwd" class="form-control"  placeholder="登陆密码">
 						<label class="control-label helplable" for="login-pass">忘记密码 <a href="#">点此找回</a></label>
 					</div>
 				</div>
